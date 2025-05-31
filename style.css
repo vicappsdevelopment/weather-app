@@ -237,10 +237,7 @@ img.glow {
     font-size: 28px;
   }
 
-  .details {
-    flex-direction: column;
-    gap: 12px;
-  }
+
 
   .col {
     justify-content: center;

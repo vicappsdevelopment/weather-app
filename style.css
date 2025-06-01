@@ -213,7 +213,7 @@ img.glow {
 }
 
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .card {
     width: 95%;
     padding: 24px 20px;
@@ -260,7 +260,7 @@ img.glow {
   .forecast-day p {
     font-size: 10px;
   }
-}
+} */
 
 /* Responsive for small phones */
 @media (max-width: 400px) {

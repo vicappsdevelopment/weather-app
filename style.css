@@ -310,12 +310,7 @@ img.glow {
     font-size: 9px;
   }
 }
-@media (max-width: 768px) {
-  /* Reduce main weather icon size on tablets and smaller screens */
-  .weather-icon {
-    width: 90px; /* smaller than default 120px */
-  }
-}
+
 
 @media (max-width: 400px) {
   /* Further reduce weather icon on very small mobile screens */
@@ -325,6 +320,21 @@ img.glow {
 
   .details {
     flex-direction: column;
+  }
+
+  .search {
+    gap: 6px;
+  }
+
+  .search input {
+    font-size: 11px;
+    padding: 6px 10px;
+    flex: 1;
+    max-width: 65vw;
+  }
+
+  .search button img {
+    width: 12px;
   }
   
 

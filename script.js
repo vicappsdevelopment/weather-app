@@ -13,9 +13,6 @@ const dateTimeDiv = document.querySelector(".date-time");
 const forecastContainer = document.querySelector(".forecast");
 const body = document.body;
 
-// Τελευταία πόλη από localStorage ή προεπιλογή
-let lastCity = localStorage.getItem("lastCity") || "Athens";
-
 // Αντιστοίχιση καιρικών συνθηκών σε εικόνες
 const weatherIcons = {
     "Clouds": "images/clouds.png",
@@ -59,9 +56,9 @@ async function checkWeather(city) {
         }
 
         const data = await response.json();
-        console.log("Current weather API data:", data);  // Εμφάνιση raw δεδομένων κονσόλα
+        console.log("Current weather API data:", data);
 
-        // Αποθήκευση τελευταίας πόλης
+        // Αποθήκευση τελευταίας πόλης (προαιρετικά - δεν χρησιμοποιείται πια στην αρχή)
         localStorage.setItem("lastCity", city);
 
         // Ενημέρωση στοιχείων καιρού
@@ -96,12 +93,12 @@ async function checkWeather(city) {
     }
 }
 
-// Συνάρτηση πρόγνωσης καιρού (5 ημέρες, ώρα 12:00)
+// Συνάρτηση πρόγνωσης καιρού
 async function checkForecast(city) {
     try {
         const response = await fetch(forecastUrl + city + `&appid=${apiKey}`);
         const data = await response.json();
-        console.log("Forecast API data:", data);  // Εμφάνιση raw δεδομένων κονσόλα
+        console.log("Forecast API data:", data);
 
         forecastContainer.innerHTML = "";
 
@@ -140,5 +137,3 @@ searchBtn.addEventListener("click", () => {
         checkWeather(searchBox.value);
     }
 });
-
-

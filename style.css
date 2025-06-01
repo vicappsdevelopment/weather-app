@@ -262,7 +262,6 @@ img.glow {
   }
 }
 
-/* Responsive for small phones */
 @media (max-width: 400px) {
   .card {
     width: 100%;
@@ -270,14 +269,25 @@ img.glow {
     margin: 20px 0 0;
   }
 
+  .search {
+    gap: 6px;
+  }
+
   .search input {
-    font-size: 12px;
-    padding: 8px 12px;
+    font-size: 11px;
+    padding: 6px 10px;
+    flex: 1;
+    max-width: 65vw;
   }
 
   .search button {
     width: 32px;
     height: 32px;
+    border-radius: 32px;
+  }
+
+  .search button img {
+    width: 12px;
   }
 
   .weather h1 {
@@ -288,7 +298,12 @@ img.glow {
     font-size: 22px;
   }
 
+  .weather-icon {
+    width: 70px;
+  }
+
   .details {
+    flex-direction: column;
     gap: 8px;
   }
 
@@ -309,33 +324,4 @@ img.glow {
   .forecast-day p {
     font-size: 9px;
   }
-}
-
-
-@media (max-width: 400px) {
-  /* Further reduce weather icon on very small mobile screens */
-  .weather-icon {
-    width: 70px; /* even smaller for very small devices */
-  }
-
-  .details {
-    flex-direction: column;
-  }
-
-  .search {
-    gap: 6px;
-  }
-
-  .search input {
-    font-size: 11px;
-    padding: 6px 10px;
-    flex: 1;
-    max-width: 65vw;
-  }
-
-  .search button img {
-    width: 12px;
-  }
-  
-
 }

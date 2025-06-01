@@ -322,4 +322,10 @@ img.glow {
   .weather-icon {
     width: 70px; /* even smaller for very small devices */
   }
+
+  .details {
+    flex-direction: column;
+  }
+  
+
 }

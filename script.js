@@ -141,10 +141,4 @@ searchBtn.addEventListener("click", () => {
     }
 });
 
-// Φόρτωση με τελευταία πόλη και αυτόματη ανανέωση κάθε 60 δευτ.
-window.addEventListener("load", () => {
-    checkWeather(lastCity);
-    setInterval(() => {
-        checkWeather(lastCity);
-    }, 60000);
-});
+
